@@ -1,11 +1,13 @@
 package com.example.e_commerce_back;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProductController {
 
+    @CrossOrigin(origins = "http://localhost:9000")
     @GetMapping("/allProducts")
     Product[] allProducts() {
 
